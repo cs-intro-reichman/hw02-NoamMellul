@@ -35,9 +35,10 @@ public class OneOfEachStats {
 			boolean boy = true;
 			boolean girl = true;
 			//int rand = (int) ((Math.random()) *2+1);
-			double rnd = generator.nextDouble();
+			//double rnd = generator.nextDouble();
 
 			while (boy || girl) {
+				double rnd = generator.nextDouble();
 				if (rnd <= 0.5) {
 					boy = false;
 					counter++;
@@ -47,8 +48,7 @@ public class OneOfEachStats {
 					counter++;
 				}//else
 				//rand = (int) ((Math.random()) *2+1);
-				rnd = generator.nextDouble();
-
+				//rnd = generator.nextDouble();
 
 			}//while
 
