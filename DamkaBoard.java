@@ -19,7 +19,7 @@ public class DamkaBoard {
 				}// if
 				else {
 					if ( i % 2 == 0){
-						System.out.print("*");
+						System.out.print("* ");
 					}//if
 					else {
 						System.out.print("*");
