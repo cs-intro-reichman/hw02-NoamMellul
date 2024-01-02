@@ -14,49 +14,50 @@ public class OneOfEachStats1 {
 		int fam3 = 0;
 		int fam4OrMore = 0;
 
-        for (int i = 0; i < T ; i++) {
-			int counter = 0;
+        for (int i = 0; i < T ; i++) { // loop for to simulate the number of families
+			int counter = 0; // to get how many children
 			boolean boy = true;
 			boolean girl = true;
-			int rand = (int) ((Math.random()) *2+1);
+			int rand = (int) ((Math.random()) *2+1); // random number between [1;2]
 
-			while (boy || girl) {
-				if (rand == 1) {
+			while (boy || girl) { // while girl or boy are true continue
+				if (rand == 1) { // get a boy
 					boy = false;
 					counter++;
 				}//if
-				else {
+				else {//get a girl
 					girl = false;
 					counter++;
 				}//else
-				rand = (int) ((Math.random()) *2+1);
+				rand = (int) ((Math.random()) *2+1);// get a new number
 
 			}//while
 
 
-            if (counter == 2){
+            if (counter == 2){ // if the counter is 2 add to the fam2
 				fam2 += 1;
 			}
 
-			else if (counter == 3){
+			else if (counter == 3){// if the counter is 3 add to the fam3
 				fam3 += 1;
 			}
 
-			else {
+			else {// if the counter is 4 or more add to the fam4OrMore
 				fam4OrMore += 1;
 			}
-			totalChild += counter;
+			totalChild += counter; // add the counter to the total that we simulated
 
 		}//for
 
-		//System.out.println(totalChild);
 
-		double average = totalChild / T;
+
+		double average = totalChild / T; // average
 		System.out.println("Average: " + average + " children to get at least one of each gender.");
 		System.out.println("Number of families with 2 children: " + fam2);
 		System.out.println("Number of families with 3 children: " + fam3);
 		System.out.println("Number of families with 4 or more children: " + fam4OrMore);
 
+		// we need to know who is the common number of children
 		if ( fam2 > fam3 && fam2 > fam4OrMore){
 			System.out.println("The most common number of children is 2.");
 		}

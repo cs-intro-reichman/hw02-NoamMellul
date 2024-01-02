@@ -6,24 +6,22 @@ import java.util.Random;
  */
 public class OneOfEach {
 	public static void main (String[] args) {
-        // Range between 1 and 2 include
-		int max = 2;
-		int min = 1;
+
 		boolean boy = true;
 		boolean girl = true;
-		String res = "";
-		int counter = 0;
-		Random rand = new Random();
+		String res = ""; // result
+		int counter = 0; // counter to get how many children you have
+		Random rand = new Random();// initialize a random number
 
-		while (boy || girl){
-			double randomValue = rand.nextDouble();
+		while (boy || girl){// while girl or boy are true continue
+			double randomValue = rand.nextDouble(); // get a random number between [0;1)
 
-			        if (randomValue >= 0.5){
+			        if (randomValue >= 0.5){ // if the number is greater or equal to 0.5 you have a boy
 					    res = res + "b ";
 					    boy = false;
 						counter++;
 				    }//if
-					else {
+					else { // you have a girl
 					    res = res + "g ";
 					    girl = false;
 					    counter++;

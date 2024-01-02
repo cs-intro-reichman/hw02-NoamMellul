@@ -4,7 +4,7 @@
 public class DamkaBoard {
 	public static void main(String[] args) {
 		int x = Integer.parseInt(args[0]);
-		if (x <= 0){
+		if (x <= 0){ // if x none positive return space
 			System.out.println(" ");
 		}//if
 		for (int i = 0; i < x; i++) { //loop for rows
